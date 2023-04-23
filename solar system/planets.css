@@ -23,8 +23,11 @@ body{
     background-color: black;
 }
 
-.title > img{
+.title > video{
+    position: relative;
     height: 100vh;
+    max-width: 100%;
+    left: 50%;
     transform: translate(-50%, 0%);
     opacity: 0.6;
 }
@@ -49,13 +52,17 @@ body{
 .nav:hover{
     opacity: 1;
 }
-
+.nav>a{
+    text-decoration: none;
+    color: white;
+  }
 .topic{
     position: absolute;
     top: 20%;
-    left: 30%;
+    left: 50%;
     font-size: 7vw;
     color: rgb(226, 255, 255);
+    transform: translate(-50%, 0%);
     margin-left: 2vw;
     font-family: sans-serif;
 }
@@ -80,9 +87,13 @@ body{
 .info-card>table{
     position: absolute;
     top: 40%;
-    left: 30%;
+    left: 50%;
     color: white;
+    transform: translate(-50%, 0%);
     opacity: 0.8;
+}
+.final{
+    background-color: rgb(0, 0, 0);
 }
 
 .content{
@@ -115,4 +126,16 @@ body{
 }
 .content > #right, .content>#left{
     opacity: 0.1;
+}
+
+@media only screen and (max-width: 900px) {
+    .info-card table{
+        display: none;
+    }
+    .topic{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 15vw;
+    }
 }
